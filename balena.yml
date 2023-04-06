@@ -1,24 +1,26 @@
-name: balena-node-red
+name: balena-node-red-atlas-scientific
 type: sw.block
 description: >-
   Build a Node-RED application with balena-supervisor flow support
   that can be managed remotely via balena public URL.
+  This image has been modified to permit installing "node-red-contrib-ezo"
+  which allows the usage of Atlas Scientific sensors via I2C protocol.
 assets:
   repository:
     type: blob.asset
     data:
-      url: "https://github.com/balena-labs-projects/balena-node-red"
+      url: "https://github.com/lapc506/balena-node-red-atlas-scientific"
   logo:
     type: blob.asset
     data:
       url: >-
-        https://raw.githubusercontent.com/balena-labs-projects/balena-node-red/master/logo.png
+        https://raw.githubusercontent.com/lapc506/balena-node-red-atlas-scientific/master/logo.png
 data:
   applicationEnvironmentVariables:
     - PORT: 80
-    - USERNAME: balena
-    - PASSWORD: balena
-    - ENCRIPTION_KEY: balena
+    - USERNAME: atlas-scientific
+    - PASSWORD: atlas-scientific
+    - ENCRIPTION_KEY: atlas-scientific
   defaultDeviceType: raspberry4-64
   supportedDeviceTypes:
     - raspberry-pi
